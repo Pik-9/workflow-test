@@ -28,7 +28,7 @@ jobs:
             artfct: "qt_test"
           - os: windows-latest
             make_cmd: "cmake.exe"
-            artfct: "Release\qt_test.exe"
+            artfct: "Release\\qt_test.exe"
 
     steps:
     # Install Qt5
