@@ -22,13 +22,10 @@ jobs:
         include:
           - os: ubuntu-latest
             make_cmd: "cmake"
-            artfct: "qt_test"
           - os: macos-latest
             make_cmd: "cmake"
-            artfct: "qt_test"
           - os: windows-latest
             make_cmd: "cmake.exe"
-            artfct: "Debug\\qt_test.exe"
 
     steps:
     # Install Qt5
@@ -47,4 +44,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: binaries
-        path: "build_${{ matrix.os }}/${{ matrix.artfct }}"
+        path: "build_${{ matrix.os }}"
